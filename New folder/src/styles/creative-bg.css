@@ -1,0 +1,25 @@
+.creative-bg {
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* diagonal glowing lines */
+.creative-bg::before,
+.creative-bg::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 2px;
+    height: 200%;
+    background: linear-gradient(to bottom, transparent, #ffe7a1, transparent);
+    opacity: 0.3;
+    transform: rotate(20deg);
+}
+
+.creative-bg::after {
+    right: 10%;
+    opacity: 0.15;
+    transform: rotate(20deg);
+}
